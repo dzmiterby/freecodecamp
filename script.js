@@ -75,36 +75,36 @@ let myDecimal = 5.7;
 const remainder = 11 % 3;
 
 // ================ 21
-let a = 3;
-let b = 17;
-let c = 12;
-a += 12;
-b += 9;
-c += 7;
+// let a = 3;
+// let b = 17;
+// let c = 12;
+// a += 12;
+// b += 9;
+// c += 7;
 
 // ================ 22
-let a = 11;
-let b = 9;
-let c = 3;
-a -= 6;
-b -= 15;
-c -= 1;
+// let a = 11;
+// let b = 9;
+// let c = 3;
+// a -= 6;
+// b -= 15;
+// c -= 1;
 
 // ================ 23
-let a = 5;
-let b = 12;
-let c = 4.6;
-a *= 5;
-b *= 3;
-c *= 10;
+// let a = 5;
+// let b = 12;
+// let c = 4.6;
+// a *= 5;
+// b *= 3;
+// c *= 10;
 
 // ================ 24
-let a = 48;
-let b = 108;
-let c = 33;
-a /= 12;
-b /= 4;
-c /= 11;
+// let a = 48;
+// let b = 108;
+// let c = 33;
+// a /= 12;
+// b /= 4;
+// c /= 11;
 
 // ================ 25
 // const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
@@ -150,7 +150,72 @@ myStr += someAdjective;
 // const thirdLetterOfLastName = lastName[2];
 
 // ================ 36
-const lastName = "Lovelace";
+// const lastName = "Lovelace";
+// const lastLetterOfLastName = lastName[lastName.length-1];
 
-// Only change code below this line
-const lastLetterOfLastName = lastName[lastName.length-1];
+// ================ 37
+const lastName = "Lovelace";
+const secondToLastLetterOfLastName = lastName[lastName.length-2];
+
+// ================ 38
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+const wordBlanks = "The " + myAdjective + " a " +  myNoun + " " + myVerb + " " + myAdverb;
+
+// ================ 39
+// const myArray = ["peanut butter", 2, "bread"];
+
+// ================ 40
+// const myArray = [["Tom", 21], ["Bob", 22]];
+
+// ================ 41
+// const myArray = [50, 60, 70];
+// let myData = myArray[0];
+
+// ================ 42
+// const myArray = [18, 64, 99];
+// myArray[0] = 45;
+
+// ================ 43
+// const myArray = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//     [[10, 11, 12], 13, 14],
+// ];
+// const myData = myArray[2][1];
+
+// ================ 44
+// const myArray = [["John", 23], ["cat", 2]];
+// myArray.push(["dog", 3]);
+
+// ================ 45
+// const myArray = [["John", 23], ["dog", 3]];
+// const removedFromMyArray = myArray.shift();
+
+// ================ 46
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul", 35]);
+
+// ================ 47
+const myList = [["Chocolate Bar", 15], ["Chocolate Bar1", 16], ["Chocolate Bar2", 17], ["Chocolate Bar3", 18], ["Chocolate Bar4", 19]];
+
+// ================ 48
+function reusableFunction () {
+    console.log("Hi World");
+}
+reusableFunction();
+
+// ================ 49
+function functionWithArgs (param1, param2) {
+    console.log(param1 + param2);
+}
+functionWithArgs(2, 5);
+
+// ================ 50
+function timesFive(num) {
+    return num * 5;
+}

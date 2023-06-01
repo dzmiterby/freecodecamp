@@ -196,9 +196,9 @@ const wordBlanks = "The " + myAdjective + " a " +  myNoun + " " + myVerb + " " +
 // const removedFromMyArray = myArray.shift();
 
 // ================ 46
-const myArray = [["John", 23], ["dog", 3]];
-myArray.shift();
-myArray.unshift(["Paul", 35]);
+// const myArray = [["John", 23], ["dog", 3]];
+// myArray.shift();
+// myArray.unshift(["Paul", 35]);
 
 // ================ 47
 const myList = [["Chocolate Bar", 15], ["Chocolate Bar1", 16], ["Chocolate Bar2", 17], ["Chocolate Bar3", 18], ["Chocolate Bar4", 19]];
@@ -219,3 +219,92 @@ functionWithArgs(2, 5);
 function timesFive(num) {
     return num * 5;
 }
+
+// ================ 51
+const myArray = [["John", 23], ["cat", 2]];
+const removedFromMyArray = myArray.pop();
+
+// ================ 52
+let myGlobal = 10;
+let oopsGlobal;
+function fun1() {
+  oopsGlobal = 5;
+}
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+//   console.log(output);
+}
+
+// ================ 53
+function myLocalScope() {
+    let myVar = 5;   
+    // console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+// console.log('outside myLocalScope', myVar);
+
+// ================ 54
+const outerWear = "T-Shirt";
+function myOutfit() {
+  const outerWear = "sweater";
+  return outerWear;
+}
+myOutfit();
+
+// ================ 55
+// let sum = 0;
+function addThree() {
+  sum = sum + 3;
+}
+function addFive() {
+  sum = sum + 5;
+  return undefined;
+}
+addThree();
+addFive();
+
+// ================ 56
+let processed = 0;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+
+// ================ 57
+function nextInLine(arr, item) {
+    arr.push(item);
+    return arr.shift();
+}
+let testArr = [1, 2, 3, 4, 5];
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+
+// ================ 58
+function welcomeToBooleans() {  
+    return true;
+}
+
+// ================ 59
+function trueOrFalse(wasThatTrue) {
+    if(wasThatTrue) {
+      return "Yes, that was true";
+    } else {
+      return "No, that was false";
+    }  
+}
+
+// ================ 60
+function testEqual(val) {
+    if (val == 12) {
+      return "Equal";
+    }
+    return "Not Equal";
+}
+testEqual(10);

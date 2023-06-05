@@ -830,13 +830,13 @@ multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 // } while (i < 10);
 
 // ================ 102
-function sum(arr, n) {
-  if(n <= 0) {
-    return 0;
-  } else {
-    return sum(arr, n - 1) + arr[n - 1];
-  }
-}
+// function sum(arr, n) {
+//   if(n <= 0) {
+//     return 0;
+//   } else {
+//     return sum(arr, n - 1) + arr[n - 1];
+//   }
+// }
 
 // ================ 103
 const contacts = [
@@ -906,4 +906,55 @@ function randomFraction() {
 // ================ 105
 function randomWholeNum() {
   return Math.floor(Math.random() * 10);;
+}
+
+// ================ 106
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+// ================ 107
+function convertToInteger(str) {
+  return parseInt(str);
+}
+convertToInteger("56");
+
+// ================ 108
+function convertToInteger(str) {
+  return parseInt(str, 2);
+}
+convertToInteger("10011");
+
+// ================ 109
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal";
+}
+checkEqual(1, 2);
+
+// ================ 110
+function checkSign(num) {
+  return (num > 0) ? "positive" : (num < 0) ? "negative" : "zero";
+}
+checkSign(10);
+
+// ================ 111
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countdownArray = countdown(n - 1);
+    countdownArray.unshift(n);
+    return countdownArray;
+  }
+}
+
+// ================ 112
+function rangeOfNumbers(startNum, endNum) {
+  if (startNum == endNum) {
+    return [startNum];
+  } else {
+    const arr = rangeOfNumbers(startNum, endNum - 1);
+    arr.push(endNum);
+    return arr;
+  }
 }

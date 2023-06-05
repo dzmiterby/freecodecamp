@@ -259,15 +259,15 @@ myOutfit();
 
 // ================ 55
 // let sum = 0;
-function addThree() {
-  sum = sum + 3;
-}
-function addFive() {
-  sum = sum + 5;
-  return undefined;
-}
-addThree();
-addFive();
+// function addThree() {
+//   sum = sum + 3;
+// }
+// function addFive() {
+//   sum = sum + 5;
+//   return undefined;
+// }
+// addThree();
+// addFive();
 
 // ================ 56
 let processed = 0;
@@ -692,3 +692,218 @@ function phoneticLookup(val) {
   return result;
 }
 phoneticLookup("charlie");
+
+// ================ 91 
+function checkObj(obj, checkProp) {
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }  
+}
+
+// ================ 92
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "Madonna",
+    "title": "Hello World!",
+    "release_year": 1999,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+  }
+];
+
+// ================ 93
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+// ================ 94
+const recordCollection = {
+  2548: {
+    albumTitle: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+  },
+  2468: {
+    albumTitle: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [],
+  },
+  5439: {
+    albumTitle: "ABBA Gold",
+  },
+};
+function updateRecords(records, id, prop, value) {
+  if (value === "") {
+    delete records[id][prop];
+  } else if (prop === "tracks") {
+    records[id][prop] ??= [];
+    records[id][prop].push(value);
+  } else {
+    records[id][prop] = value;
+  }
+  return records;
+}
+updateRecords(recordCollection, 5439, "artist", "ABBA");
+
+// ================ 95
+// const myArray = [];
+// let i = 5;
+// while (i >= 0) {
+//   myArray.push(i);
+//   i--;
+// }
+
+// ================ 96
+// const myArray = [];
+// for (let i = 1; i <= 5; i++) {
+//   myArray.push(i);
+// }
+
+// ================ 97
+// const myArray = [];
+// for (let i = 1; i < 10; i++) {
+//   if (i % 2 != 0) {
+//     myArray.push(i);
+//   }
+// }
+
+// ================ 98
+// const myArray = [];
+// for (let i = 9; i > 0; i -= 2) {
+//   myArray.push(i);
+// }
+
+// ================ 99
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+   total += myArr[i];
+}
+
+// ================ 100
+function multiplyAll(arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+}
+  return product;
+}
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+// ================ 101
+// const myArray = [];
+// let i = 10;
+// do {
+//   myArray.push(i);
+//   i++;
+// } while (i < 10);
+
+// ================ 102
+function sum(arr, n) {
+  if(n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+}
+
+// ================ 103
+const contacts = [
+  {
+      "firstName": "Akira",
+      "lastName": "Laine",
+      "number": "0543236543",
+      "likes": ["Pizza", "Coding", "Brownie Points"]
+  },
+  {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "number": "0994372684",
+      "likes": ["Hogwarts", "Magic", "Hagrid"]
+  },
+  {
+      "firstName": "Sherlock",
+      "lastName": "Holmes",
+      "number": "0487345643",
+      "likes": ["Intriguing Cases", "Violin"]
+  },
+  {
+      "firstName": "Kristian",
+      "lastName": "Vos",
+      "number": "unknown",
+      "likes": ["JavaScript", "Gaming", "Foxes"]
+  }
+];
+function printValues(){
+  for(let a = 0; a < contacts.length; a++){
+      contacts[a].firstName;
+  }   
+}
+function isNameExist(name ){
+  for(let a = 0; a < contacts.length; a++){
+      if (contacts[a].firstName == name)
+          return true;
+  }
+  return false;
+}
+function isPropertyExist(prop){
+  for(let a = 0; a < contacts.length; a++){
+      if (contacts[a].hasOwnProperty (prop))
+          return true;
+  }
+  return false;
+}
+function lookUpProfile(name, prop) {
+      if(!isNameExist(name)) {
+          return "No such contact";
+      } else if(!isPropertyExist(prop)) {
+          return "No such property";
+      }
+      for(let a = 0; a <  contacts.length; a++) {
+      if(contacts[a].firstName == name && contacts[a].hasOwnProperty(prop)){
+              return contacts[a][prop];
+          }   
+      }
+}
+lookUpProfile("Akira", "likes");
+
+// ================ 104
+function randomFraction() {
+  return Math.random();
+}
+
+// ================ 105
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);;
+}

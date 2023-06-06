@@ -42,7 +42,7 @@ fact = "is awesome!";
 console.log(FCC, fact); // Change this line
 
 // ================ 11
-const sum = 10 + 10;
+// const sum = 10 + 10;
 
 // ================ 12
 const difference = 45 - 33;
@@ -958,3 +958,131 @@ function rangeOfNumbers(startNum, endNum) {
     return arr;
   }
 }
+
+// ================ ES6 ================
+// ================ 1
+function checkScope() {
+  "use strict";
+    let i = "function scope";
+    if (!true) {
+      i = "block scope";
+      console.log("Block scope i is: ", i);
+    } else {
+    console.log("Function scope i is: ", i);
+    return i;
+    }
+}
+
+// ================ 2
+const s = [5, 7, 2];
+function editInPlace() {
+  let i1 = s[0];
+  let i2 = s[1];
+  let i3 = s[2];
+  s[0] = i3;
+  s[1] = i1;
+  s[2] = i2;
+}
+editInPlace();
+
+// ================ 3
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  Object.freeze(MATH_CONSTANTS);
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+// ================ 4
+const magic = () => {
+  return new Date();
+};
+
+// ================ 5
+const myConcat = (arr1, arr2) => {
+  return arr1.concat(arr2);
+};
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+// ================ 6
+const increment = (number, value = 1) => number + value;
+
+// ================ 7
+const sum = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+
+// ================ 8
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+arr2 = [...arr1]; 
+console.log(arr2);
+
+// ================ 9
+// const HIGH_TEMPERATURES = {
+//   yesterday: 75,
+//   today: 77,
+//   tomorrow: 80
+// };
+// const highToday = HIGH_TEMPERATURES.today;
+// const highTomorrow = HIGH_TEMPERATURES.tomorrow; 
+// const { today, tomorrow} = HIGH_TEMPERATURES;
+
+// ================ 10
+// const HIGH_TEMPERATURES = {
+//   yesterday: 75,
+//   today: 77,
+//   tomorrow: 80
+// };
+// const { today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+// ================ 11
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+}; 
+const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
+
+// ================ 12
+let a = 8, b = 6;
+[a,b] = [b,a];
+
+// ================ 13
+function removeFirstTwo(list) {
+  const [a, b, ...shorterList] = list;
+  return shorterList;
+}
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
+
+// ================ 14
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+const half = ({max, min}) => ((max + min) / 2.0);
+
+// ================ 15
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = result.failure.map(element => `<li class="text-warning">${element}</li>`);
+  // Only change code above this line
+  return failureItems;
+}
+const failuresList = makeList(result.failure);

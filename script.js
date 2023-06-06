@@ -1086,3 +1086,51 @@ function makeList(arr) {
   return failureItems;
 }
 const failuresList = makeList(result.failure);
+
+// ================ 16
+const createPerson = (name, age, gender) => {
+  return {name, age, gender};
+}
+
+// ================ 17
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+}
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// ================ 18
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
+
+// ================ 19
+class Thermostat {
+  constructor(fahrenheit) {
+    this._tempInCelsius = 5/9 * (fahrenheit - 32);
+  }
+  get temperature() {
+    return this._tempInCelsius;
+  }
+  set temperature(newTemp) {
+    this._tempInCelsius = newTemp;
+  }
+}
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
+
+// ================ 20
+<html>
+  <body>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

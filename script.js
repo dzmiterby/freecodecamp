@@ -1285,3 +1285,28 @@ const makeServerRequest = new Promise((resolve, reject) => {
 
 // ================ 15
 let reCriminals = /C+/;
+
+// ================ 16
+// let rickyAndCal = "Cal and Ricky both like racing.";
+// let calRegex = /^Cal/;
+// let result = calRegex.test(rickyAndCal);
+
+// ================ 17
+// let caboose = "The last car on a train is the caboose";
+// let lastRegex = /caboose$/; // Change this line
+// let result = lastRegex.test(caboose);
+
+// ================ 18
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let alphabetRegexV2 = /\w/g;
+// let result = quoteSample.match(alphabetRegexV2).length;
+
+// ================ 19
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g;
+// let result = quoteSample.match(nonAlphabetRegex).length;
+
+// ================ 20
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g;
+// let result = movieName.match(numRegex).length;

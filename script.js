@@ -1237,3 +1237,51 @@ const makeServerRequest = new Promise((resolve, reject) => {
 // let extractStr = "Extract the word 'coding' from this string.";
 // let codingRegex = /coding/; // Change this line
 // let result = extractStr.match(codingRegex); // Change this line
+
+// ================ 6
+// let twinkleStar = "Twinkle, twinkle, little star";
+// let starRegex = /twinkle/gi;
+// let result = twinkleStar.match(starRegex);
+
+// ================ 7
+// let exampleStr = "Let's have fun with regular expressions!";
+// let unRegex = /.un/;
+// let result = unRegex.test(exampleStr);
+
+// ================ 8
+// let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+// let vowelRegex = /[aeiou]/gi;
+// let result = quoteSample.match(vowelRegex);
+
+// ================ 9
+// let quoteSample = "The quick brown fox jumps over the lazy dog.";
+// let alphabetRegex = /[a-z]/gi;
+// let result = quoteSample.match(alphabetRegex);
+
+// ================ 10
+// let quoteSample = "Blueberry 3.141592653s are delicious.";
+// let myRegex = /[h-s2-6]/ig;
+// let result = quoteSample.match(myRegex);
+
+// ================ 11
+// let quoteSample = "3 blind mice.";
+// let myRegex = /[^aeiou0-9]/gi;
+// let result = quoteSample.match(myRegex);
+
+// ================ 12
+// let difficultSpelling = "Mississippi";
+// let myRegex = /s+/gi;
+// let result = difficultSpelling.match(myRegex);
+
+// ================ 13
+// let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+// let chewieRegex = /Aa*/;
+// let result = chewieQuote.match(chewieRegex);
+
+// ================ 14
+// let text = "<h1>Winter is coming</h1>";
+// let myRegex = /<.*?>/;
+// let result = text.match(myRegex);
+
+// ================ 15
+let reCriminals = /C+/;

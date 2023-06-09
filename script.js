@@ -1335,3 +1335,44 @@ let reCriminals = /C+/;
 // let ohStr = "Ohhh no";
 // let ohRegex = /Oh{3,6} no/;
 // let result = ohRegex.test(ohStr);
+
+// ================ 26
+// let haStr = "Hazzzzah";
+// let haRegex = /Haz{4,}ah/g;
+// let result = haRegex.test(haStr);
+
+// ================ 27
+// let timStr = "Timmmmber";
+// let timRegex = /Tim{4}ber/g;
+// let result = timRegex.test(timStr);
+
+// ================ 28 
+// let favWord = "favorite";
+// let favRegex = /favou?rite/; // Change this line
+// let result = favRegex.test(favWord);
+
+// ================ 29
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6,})(?=\D+\d\d)/; 
+// let result = pwRegex.test(sampleWord);
+
+// ================ 30
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Franklin |Eleanor ).*Roosevelt/;
+// let result = myRegex.test(myString);
+
+// ================ 31
+// let repeatNum = "42 42 42";
+// let reRegex = /^(\d+) \1 \1$/;
+// let result = repeatNum.match(reRegex);
+
+// ================ 32
+// let str = "one two three";
+// let fixRegex = /(\w+) (\w+) (\w+)/g;
+// let replaceText = "$3 $2 $1";
+// let result = str.replace(fixRegex, replaceText);
+
+// ================ 33
+// let hello = "   Hello, World!  ";
+// let wsRegex = /^(\s+)(.+[^\s])(\s+)$/;
+// let result = hello.replace(wsRegex, '$2');

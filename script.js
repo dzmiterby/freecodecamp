@@ -1310,3 +1310,28 @@ let reCriminals = /C+/;
 // let movieName = "2001: A Space Odyssey";
 // let numRegex = /\d/g;
 // let result = movieName.match(numRegex).length;
+
+// ================ 21
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g;
+// let result = movieName.match(noNumRegex).length;
+
+// ================ 22
+// let username = "JackOfAllTrades";
+// let userCheck = /^[a-z]([a-z]+\d*|\d{2,})$/i;
+// let result = userCheck.test(username);
+
+// ================ 23
+// let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\s/g;
+// let result = sample.match(countWhiteSpace);
+
+// ================ 24
+// let sample = "Whitespace is important in separating words";
+// let countNonWhiteSpace = /\S/g;
+// let result = sample.match(countNonWhiteSpace);
+
+// ================ 25
+// let ohStr = "Ohhh no";
+// let ohRegex = /Oh{3,6} no/;
+// let result = ohRegex.test(ohStr);

@@ -1431,3 +1431,22 @@ console.log(innerHtml);
 // }
 // let result = getNine();
 // console.log(result);
+
+// ================ 9
+function raiseToPower(b, e) {
+  return Math.pow(b, e);
+}
+let base = 2;
+let exp = 3;
+let power = raiseToPower(base, exp);
+console.log(power);
+
+// ================ 10
+function countToFive() {
+  let firstFive = "12345";
+  let len = firstFive.length;
+  for (let i = 0; i < len; i++) {
+    console.log(firstFive[i]);
+  }
+}
+countToFive();

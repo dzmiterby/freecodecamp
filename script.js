@@ -1472,3 +1472,22 @@ function myFunc() {
     console.log("Still going!");
   }
 }
+
+// ================ Basic Data Structures ================
+// ================ 1
+let yourArray;
+yourArray = [
+  {name: "Sasa", age: 51, man: true},
+  {name: "Nata", age: 54, man: false},
+  {name: "Tom", age: 27, man: true},
+  {name: "John", age: 19, man: true},
+  {name: "Madonna", age: 51, man: false},
+  "string",
+  123,
+  true
+]
+
+// ================ 2
+// let myArray = ["a", "b", "c", "d"];
+// myArray[1] = "z";
+// console.log(myArray);

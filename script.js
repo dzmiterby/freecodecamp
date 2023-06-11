@@ -1537,3 +1537,17 @@ function copyMachine(arr, num) {
   return newArr;
 }
 console.log(copyMachine([true, false, true], 2));
+
+// ================ 9
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning', ...fragment, 'is', 'fun'];
+  return sentence;
+}
+console.log(spreadOut());
+
+// ================ 10
+function quickCheck(arr, elem) {
+  return arr.indexOf(elem) != -1;
+}
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));

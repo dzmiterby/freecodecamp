@@ -1507,3 +1507,16 @@ function popShift(arr) {
   return [shifted, popped];
 }
 console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+// ================ 5
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+arr.splice(0, 1);
+arr.splice(3, 4);
+console.log(arr);
+
+// ================ 6
+function htmlColorNames(arr) {
+  arr.splice(0,2, 'DarkSalmon', 'BlanchedAlmond');
+  return arr;
+}
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));

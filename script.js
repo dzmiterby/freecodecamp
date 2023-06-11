@@ -1491,3 +1491,19 @@ yourArray = [
 // let myArray = ["a", "b", "c", "d"];
 // myArray[1] = "z";
 // console.log(myArray);
+
+// ================ 3
+function mixedNumbers(arr) {
+  arr.unshift('I', 2, 'three');
+  arr.push(7, 'VIII', 9);
+  return arr;
+}
+console.log(mixedNumbers(['IV', 5, 'six']));
+
+// ================ 4
+function popShift(arr) {
+  let popped = arr.pop();
+  let shifted = arr.shift();
+  return [shifted, popped];
+}
+console.log(popShift(['challenge', 'is', 'not', 'complete']));

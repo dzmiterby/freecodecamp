@@ -1051,8 +1051,8 @@ const LOCAL_FORECAST = {
 const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
 
 // ================ 12
-let a = 8, b = 6;
-[a,b] = [b,a];
+// let a = 8, b = 6;
+// [a,b] = [b,a];
 
 // ================ 13
 function removeFirstTwo(list) {
@@ -1129,11 +1129,11 @@ thermos.temperature = 26;
 temp = thermos.temperature;
 
 // ================ 20
-<html>
+{/* <html>
   <body>
     <script type="module" src="index.js"></script>
   </body>
-</html>
+</html> */}
 
 // ================ 21
 const uppercaseString = (string) => {
@@ -1142,36 +1142,36 @@ const uppercaseString = (string) => {
 const lowercaseString = (string) => {
   return string.toLowerCase()
 }
-export { uppercaseString, lowercaseString };
+// export { uppercaseString, lowercaseString };
 
 // ================ 22
-import { uppercaseString, lowercaseString } from './string_functions.js';
+// import { uppercaseString, lowercaseString } from './string_functions.js';
 uppercaseString("hello");
 lowercaseString("WORLD!");
 
 // ================ 23
-import * as stringFunctions from "./string_functions.js";
-stringFunctions.uppercaseString("hello");
-stringFunctions.lowercaseString("WORLD!");
+// import * as stringFunctions from "./string_functions.js";
+// stringFunctions.uppercaseString("hello");
+// stringFunctions.lowercaseString("WORLD!");
 
 // ================ 24
-export default function subtract(x, y) {
-  return x - y;
-}
+// export default function subtract(x, y) {
+//   return x - y;
+// }
 
 // ================ 25
-import subtract from "./math_functions.js";
-subtract(7,4);
+// import subtract from "./math_functions.js";
+// subtract(7,4);
 
 // ================ 26
-const makeServerRequest = new Promise((resolve, reject) => {
-  let responseFromServer;
-  if(responseFromServer) {
-     resolve("We got the data");
-  } else {  
-     reject("Data not received");
-  }
-})
+// const makeServerRequest = new Promise((resolve, reject) => {
+//   let responseFromServer;
+//   if(responseFromServer) {
+//      resolve("We got the data");
+//   } else {  
+//      reject("Data not received");
+//   }
+// })
 
 // ================ 27
 // const makeServerRequest = new Promise((resolve, reject) => {
@@ -1379,11 +1379,11 @@ let reCriminals = /C+/;
 
 // ================ Debugging ================
 // ================ 1
-let a = 5;
-let b = 1;
-a++;
-let sumAB = a + b;
-console.log(a);
+// let a = 5;
+// let b = 1;
+// a++;
+// let sumAB = a + b;
+// console.log(a);
 
 // ================ 2
 let output = "Get this to show once in the freeCodeCamp console and not at all in the browser console";
@@ -1551,3 +1551,31 @@ function quickCheck(arr, elem) {
   return arr.indexOf(elem) != -1;
 }
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// ================ 11
+function filteredArray(arr, elem) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) == -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+console.log(filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18));
+
+// ================ 12
+let myNestedArray = [
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+  [ 
+    ['loop', 'shift', 6, 7, 1000, 'method', 'deep'],
+    [ 
+      ['concat', false, true, 'deeper', 'spread', 'array'],
+      [
+        ['deepest', 'mutate', 1327.98, 'splice', 'slice', 'push']
+      ]
+    ]
+  ],
+  ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+]

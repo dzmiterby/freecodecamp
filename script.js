@@ -1604,29 +1604,80 @@ userActivity.data.online = 45;
 console.log(userActivity);
 
 // ================ 15
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
-}
-function checkInventory(scannedItem) {
-  return foods[scannedItem];
-}
-console.log(checkInventory("apples"));
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// }
+// function checkInventory(scannedItem) {
+//   return foods[scannedItem];
+// }
+// console.log(checkInventory("apples"));
 
 // ================ 16
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
-}
-delete foods.oranges;
-delete foods.plums;
-delete foods.strawberries;
-console.log(foods);
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// }
+// delete foods.oranges;
+// delete foods.plums;
+// delete foods.strawberries;
+// console.log(foods);
+
+// ================ 17
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: true
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: true
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// }
+// function isEveryoneHere(userObj) {
+//   if ('Alan' in userObj && 'Jeff' in userObj && 'Sarah' in userObj && 'Ryan' in userObj) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(isEveryoneHere(users));
+
+// ================ 18
+// const users = {
+//   Alan: {
+//     online: false
+//   },
+//   Jeff: {
+//     online: true
+//   },
+//   Sarah: {
+//     online: false
+//   }
+// }
+// function countOnline(allUsers) {
+//   let count = 0;
+//   for (let key in allUsers) {
+//     if (allUsers[key].online == true) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(countOnline(users));

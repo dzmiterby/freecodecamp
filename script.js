@@ -1731,3 +1731,139 @@ function addFriend(userObj, friend) {
   return userObj.data.friends;
 }
 console.log(addFriend(user, 'Pete'));
+
+// ================ Basic Algorithm Scripting ================
+// ================ 1
+function convertCtoF(celsius) {
+  let fahrenheit = 9 / 5 * celsius + 32;
+  return fahrenheit;
+}
+convertCtoF(30);
+
+// ================ 2
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+reverseString("hello");
+
+// ================ 3
+function factorialize(num) {
+  let f = 1;
+  for (let i = 1; i <= num; i++) {
+    f *= i;
+  }
+  return f;
+}
+factorialize(5);
+
+// ================ 4
+function findLongestWordLength(str) {
+  let arr = str.split(" ");
+  let max = arr[0].length;
+  for (let i = 0; i < arr.length; i++) {
+    if (max < arr[i].length) {
+      max = arr[i].length;
+    }
+  }
+  return max;
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+// ================ 5
+function largestOfFour(arr) {
+  let ar = [];
+  for (let i = 0; i < arr.length; i++) {
+    let max = arr[i][0];
+    for (let k = 0; k < arr[i].length; k++) {
+      if (max < arr[i][k]) {
+        max = arr[i][k];
+      }
+    }
+    ar.push(max);
+  }
+  return ar;
+}
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+// ================ 6
+function confirmEnding(str, target) {
+  return str.substring(str.length - target.length) == target;
+}
+confirmEnding("Bastian", "n");
+
+// ================ 7
+function repeatStringNumTimes(str, num) {
+  let s = "";
+  for (let i = 0; i < num; i++) {
+    s += str;
+  }
+  return s;
+}
+repeatStringNumTimes("abc", 3);
+
+// ================ 8
+function truncateString(str, num) {
+  if (str.length <= num) {
+    return str;
+  } else {
+    return str.slice(0, num) + "...";
+  }
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+// ================ 9
+function findElement(arr, func) {
+  for (let i = 0; i < arr[i]; i++) {
+    if (func(arr[i])) {
+      return arr[i];
+    }
+  }
+  return undefined;
+}
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+// ================ 10
+function booWho(bool) {
+  if (bool === true || bool === false) return true;
+  return false;
+}
+booWho(null);
+
+// ================ 11
+function titleCase(str) {
+  let arr = str.split(" ");
+  let s = "";
+  let ar = [];
+  for (let i = 0; i < arr.length; i++) {
+    s = arr[i][0].toUpperCase() + arr[i].slice(1).toLowerCase();
+    ar.push(s);
+  }
+  return ar.join(" ");
+}
+titleCase("I'm a little tea pot");
+
+// ================ 12
+function frankenSplice(arr1, arr2, n) {
+  let ar = [];
+  for (let i = 0; i < n; i++) {
+    ar.push(arr2[i]);
+  }
+  let arr = ar.concat(arr1);
+  for (let i = n; i < arr2.length; i++) {
+    arr.push(arr2[i]);
+  }
+  return arr;
+}
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+// ================ 13
+function bouncer(arr) {
+  let ar = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != false && arr[i] != null && arr[i] != 0 && arr[i] != "" && arr[i] != undefined && arr[i] != NaN) {
+      ar.push(arr[i]);
+    }
+  }
+  return ar;
+}
+bouncer([7, "ate", "", false, 9]);

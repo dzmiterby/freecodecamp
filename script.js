@@ -1867,3 +1867,43 @@ function bouncer(arr) {
   return ar;
 }
 bouncer([7, "ate", "", false, 9]);
+
+// ================ 14
+function getIndexToIns(arr, num) {
+  let n = 0;
+  let ar = arr.sort((a, b) => a - b);
+  for (let i = 0; i < ar.length; i++) {
+    if (num > ar[i] && num < ar[i + 1] || num > ar[i]) {
+      n = i + 1;
+    }
+    if (num == ar[i]) {
+      n = i;
+    }
+  }
+  return n;
+}
+getIndexToIns([40, 60], 50);
+
+// ================ 15
+function mutation(arr) {
+  let str1 = arr[0].toLowerCase();
+  let str2 = arr[1].toLowerCase();
+  for (let i = 0; i < str2.length; i++) {
+    if (str1.indexOf(str2[i]) == -1) {
+      return false;
+    }
+  }
+  return true;
+}
+mutation(["hello", "hey"]);
+
+// ================ 16
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  while (arr.length) {
+    newArr.push(arr.splice(0, size));
+  }
+  return newArr;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
